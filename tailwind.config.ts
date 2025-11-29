@@ -3,10 +3,9 @@ import daisyui from 'daisyui';
 
 export default {
   content: [
-    './app/**/*.{js,ts,jsx,tsx,mdx}', // Adjust if using /pages or /src
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
-    // Add more paths if you have other folders
   ],
   theme: {
     extend: {
@@ -16,7 +15,7 @@ export default {
         accent: 'var(--accent-color)',
         secondary: 'var(--secondary-color)',
         warning: 'var(--warning-color)',
-        error: 'var(--error-color)',
+        error: 'var(--error-error)',
         success: 'var(--success-color)',
         info: 'var(--info-color)',
         disabled: 'var(--disabled-color)',
@@ -41,38 +40,9 @@ export default {
       },
       animation: {
         meteor: 'meteor 5s linear infinite',
-        shine: 'zezzz 5s infinite', // Matches your .shine class
+        shine: 'zezzz 5s infinite',
       },
     },
   },
   plugins: [daisyui],
-  daisyui: {
-    themes: [
-      {
-        light: {
-          primary: '#00a3ff', // Your accent
-          secondary: '#39ff14',
-          accent: '#00a3ff',
-          neutral: '#1a1a1a',
-          'base-100': '#f1f1f1', // Background
-          info: '#007bff',
-          success: '#39ff14',
-          warning: '#ff9500',
-          error: '#ff3333',
-        },
-        dark: {
-          primary: '#00a3ff',
-          secondary: '#39ff14',
-          accent: '#00a3ff',
-          neutral: '#f1f1f1',
-          'base-100': '#1a1a1a', // Dark background
-          info: '#66b3ff',
-          success: '#39ff14',
-          warning: '#ffaa33',
-          error: '#ff6666',
-        },
-      },
-    ],
-    darkTheme: 'dark', // Enables auto dark mode
-  },
 } satisfies Config;
