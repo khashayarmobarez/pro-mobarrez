@@ -15,13 +15,13 @@ export default {
         accent: 'var(--accent-color)',
         secondary: 'var(--secondary-color)',
         warning: 'var(--warning-color)',
-        error: 'var(--error-error)',
+        error: 'var(--error-color)', // FIXED: was --error-error
         success: 'var(--success-color)',
         info: 'var(--info-color)',
         disabled: 'var(--disabled-color)',
       },
       fontFamily: {
-        display: ['Inter', 'sans-serif'],
+        display: ['var(--font-inter)', 'Inter', 'sans-serif'],
       },
       letterSpacing: {
         tighter: '-0.025em',
@@ -45,4 +45,22 @@ export default {
     },
   },
   plugins: [daisyui],
+  daisyui: {
+    themes: [
+      {
+        dark: {
+          primary: '#00a3ff',
+          secondary: '#39ff14',
+          accent: '#00a3ff',
+          neutral: '#f1f1f1',
+          'base-100': '#1a1a1a',
+          info: '#66b3ff',
+          success: '#39ff14',
+          warning: '#ffaa33',
+          error: '#ff6666',
+        },
+      },
+    ],
+    darkTheme: 'dark',
+  },
 } satisfies Config;
