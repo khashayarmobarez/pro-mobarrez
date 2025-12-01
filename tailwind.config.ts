@@ -10,15 +10,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
-        accent: 'var(--accent-color)',
-        secondary: 'var(--secondary-color)',
-        warning: 'var(--warning-color)',
-        error: 'var(--error-color)', // FIXED: was --error-error
-        success: 'var(--success-color)',
-        info: 'var(--info-color)',
-        disabled: 'var(--disabled-color)',
+        background: 'rgb(var(--background) / <alpha-value>)',
+        foreground: 'rgb(var(--foreground) / <alpha-value>)',
+        accent: 'rgb(var(--accent-color) / <alpha-value>)',
+        secondary: 'rgb(var(--secondary-color) / <alpha-value>)',
+        warning: 'rgb(var(--warning-color) / <alpha-value>)',
+        error: 'rgb(var(--error-color) / <alpha-value>)',
+        success: 'rgb(var(--success-color) / <alpha-value>)',
+        info: 'rgb(var(--info-color) / <alpha-value>)',
+        disabled: 'rgb(var(--disabled-color) / <alpha-value>)',
       },
       fontFamily: {
         display: ['var(--font-inter)', 'Inter', 'sans-serif'],
