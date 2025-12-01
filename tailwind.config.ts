@@ -10,15 +10,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: 'rgb(var(--background) / <alpha-value>)',
-        foreground: 'rgb(var(--foreground) / <alpha-value>)',
-        accent: 'rgb(var(--accent-color) / <alpha-value>)',
-        secondary: 'rgb(var(--secondary-color) / <alpha-value>)',
-        warning: 'rgb(var(--warning-color) / <alpha-value>)',
-        error: 'rgb(var(--error-color) / <alpha-value>)',
-        success: 'rgb(var(--success-color) / <alpha-value>)',
-        info: 'rgb(var(--info-color) / <alpha-value>)',
-        disabled: 'rgb(var(--disabled-color) / <alpha-value>)',
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+        accent: 'var(--accent-color)',
+        secondary: 'var(--secondary-color)',
+        warning: 'var(--warning-color)',
+        error: 'var(--error-color)',
+        success: 'var(--success-color)',
+        info: 'var(--info-color)',
+        disabled: 'var(--disabled-color)',
       },
       fontFamily: {
         display: ['var(--font-inter)', 'Inter', 'sans-serif'],
@@ -54,6 +54,8 @@ export default {
           accent: '#00a3ff',
           neutral: '#f1f1f1',
           'base-100': '#1a1a1a',
+          'base-200': '#2a2a2a',
+          'base-300': '#3a3a3a',
           info: '#66b3ff',
           success: '#39ff14',
           warning: '#ffaa33',
@@ -62,5 +64,8 @@ export default {
       },
     ],
     darkTheme: 'dark',
+    base: true,
+    styled: true,
+    utils: true,
   },
 } satisfies Config;
