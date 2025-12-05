@@ -40,7 +40,7 @@ const NavbarButton = ({ className, onClick, checked }: NavbarSwitchProps) => {
                         position: absolute;
                         height: 2.5px;
                         width: 100%;
-                        background: var(--foreground);
+                        background: var(--color-foreground);
                         border-radius: 9px;
                         opacity: 1;
                         left: 0;

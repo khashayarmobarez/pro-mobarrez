@@ -98,7 +98,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer - FIXED WITH SOLID BACKGROUND */}
       <div
-        className={`fixed inset-y-0 right-0 w-full border-l border-foreground/10 shadow-2xl transform transition-transform duration-300 ease-in-out z-40 ${
+        className={`fixed inset-y-0 right-0 w-full bg-background border-l border-foreground/10 shadow-2xl transform transition-transform duration-300 ease-in-out z-40 ${
           isDrawerOpen ? "translate-x-0" : "translate-x-full"
         } md:hidden`}
       >

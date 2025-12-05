@@ -1,41 +1,50 @@
 @import "tailwindcss";
 
-/* Color Variables */
-:root {
-  --background: #f1f1f1;
-  --foreground: #1a1a1a;
-  --accent-color: #00a3ff;
-  --secondary-color: #39ff14;
-  --warning-color: #ff9500;
-  --error-color: #ff3333;
-  --success-color: #39ff14;
-  --info-color: #007bff;
-  --disabled-color: #b0b0b0;
+/* Tailwind v4 Theme Configuration */
+@theme {
+  --color-background: #f1f1f1;
+  --color-foreground: #1a1a1a;
+  --color-accent: #00a3ff;
+  --color-secondary: #39ff14;
+  --color-warning: #ff9500;
+  --color-error: #ff3333;
+  --color-success: #39ff14;
+  --color-info: #007bff;
+  --color-disabled: #b0b0b0;
 }
 
-[data-theme="dark"] {
-  --background: #1a1a1a;
-  --foreground: #f1f1f1;
-  --accent-color: #00a3ff;
-  --secondary-color: #39ff14;
-  --warning-color: #ffaa33;
-  --error-color: #ff6666;
-  --success-color: #39ff14;
-  --info-color: #66b3ff;
-  --disabled-color: #666;
-}
-
+/* Dark theme overrides */
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    --background: #1a1a1a;
-    --foreground: #f1f1f1;
+  @theme {
+    --color-background: #1a1a1a;
+    --color-foreground: #f1f1f1;
+    --color-accent: #00a3ff;
+    --color-secondary: #39ff14;
+    --color-warning: #ffaa33;
+    --color-error: #ff6666;
+    --color-success: #39ff14;
+    --color-info: #66b3ff;
+    --color-disabled: #666;
   }
 }
 
+/* Custom data-theme attribute for dark mode */
+[data-theme="dark"] {
+  --color-background: #1a1a1a;
+  --color-foreground: #f1f1f1;
+  --color-accent: #00a3ff;
+  --color-secondary: #39ff14;
+  --color-warning: #ffaa33;
+  --color-error: #ff6666;
+  --color-success: #39ff14;
+  --color-info: #66b3ff;
+  --color-disabled: #666;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-inter), Inter, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: Inter, sans-serif;
 }
 
 /* Custom animations */
