@@ -1,7 +1,19 @@
 import type { Config } from 'tailwindcss';
 import daisyui from 'daisyui';
 
-export default {
+interface DaisyUIConfig {
+  themes?: Array<Record<string, Record<string, string>>>;
+  darkTheme?: string;
+  base?: boolean;
+  styled?: boolean;
+  utils?: boolean;
+}
+
+interface ExtendedConfig extends Config {
+  daisyui?: DaisyUIConfig;
+}
+
+const config: ExtendedConfig = {
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -68,4 +80,6 @@ export default {
     styled: true,
     utils: true,
   },
-} satisfies Config;
+};
+
+export default config;
