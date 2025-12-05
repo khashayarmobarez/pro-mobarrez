@@ -87,7 +87,7 @@ export default function Navbar() {
             {/* Mobile Menu Button - FIXED WITH VISIBLE BUTTON */}
             <button
               onClick={toggleDrawer}
-              className="md:hidden flex flex-col items-center justify-center gap-1 p-3 rounded-lg bg-accent/10 hover:bg-accent/20 transition-all border border-accent/30"
+              className="md:hidden flex flex-col items-center justify-center gap-1 p-3 rounded-lg hover:bg-accent/20 transition-all border border-accent/30"
               aria-label="Menu"
             >
               <div className="w-6 h-5 flex flex-col justify-between">
