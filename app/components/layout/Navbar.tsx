@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Logo from "@/app/components/ui/Logo";
+import NavbarButton from "../elements/NavbarButton";
 
 export default function Navbar() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -10,8 +11,8 @@ export default function Navbar() {
   const lastScrollY = useRef(0);
 
   // Toggle drawer
-  const toggleDrawer = () => {
-    setIsDrawerOpen((prev) => !prev);
+  const toggleDrawer = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setIsDrawerOpen(e.target.checked);
   };
 
   // Navigation links
@@ -85,17 +86,12 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Menu Button - FIXED WITH VISIBLE BUTTON */}
-            <button
+            <NavbarButton
               onClick={toggleDrawer}
+              checked={isDrawerOpen}
               className="md:hidden flex flex-col items-center justify-center gap-1 p-3 rounded-lg hover:bg-accent/20 transition-all border border-accent/30"
               aria-label="Menu"
-            >
-              <div className="w-6 h-5 flex flex-col justify-between">
-                <span className={`h-0.5 w-full bg-accent transition-all duration-300 ${isDrawerOpen ? "rotate-45 translate-y-2" : ""}`} />
-                <span className={`h-0.5 w-full bg-accent transition-all duration-300 ${isDrawerOpen ? "opacity-0" : ""}`} />
-                <span className={`h-0.5 w-full bg-accent transition-all duration-300 ${isDrawerOpen ? "-rotate-45 -translate-y-2" : ""}`} />
-              </div>
-            </button>
+            />
           </div>
         </div>
       </nav>
