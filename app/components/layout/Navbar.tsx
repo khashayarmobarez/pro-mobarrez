@@ -15,6 +15,11 @@ export default function Navbar() {
     setIsDrawerOpen(e.target.checked);
   };
 
+  // Close drawer (for links and overlay)
+  const closeDrawer = () => {
+    setIsDrawerOpen(false);
+  };
+
   // Navigation links
   const navLinks = [
     { name: "Team", href: "/team" },
@@ -108,7 +113,7 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               className="text-foreground text-xl font-medium hover:text-accent transition-colors py-2"
-              onClick={toggleDrawer}
+              onClick={closeDrawer}
             >
               {link.name}
             </Link>
@@ -118,7 +123,7 @@ export default function Navbar() {
           <Link
             href="/hire"
             className="mt-6 inline-flex items-center justify-center px-6 py-3 bg-accent text-white font-medium rounded-lg hover:bg-accent/90 transition-all duration-200 shadow-lg shadow-accent/20"
-            onClick={toggleDrawer}
+            onClick={closeDrawer}
           >
             Hire the Squad
           </Link>
@@ -129,7 +134,7 @@ export default function Navbar() {
       {isDrawerOpen && (
         <div
           className="fixed inset-0 bg-black/50 z-30 md:hidden"
-          onClick={toggleDrawer}
+          onClick={closeDrawer}
         />
       )}
     </>
