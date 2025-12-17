@@ -13,12 +13,6 @@ export default function Home() {
             <h1 className="text-5xl font-bold mb-4">
               Mobarrez <span className="text-accent">Pro</span>
             </h1>
-            <p className="text-xl text-foreground/60">
-              Navbar and Footer are ready! 🚀
-            </p>
-            <p className="text-foreground/60 mt-4">
-              Scroll down to test the auto-hide navbar feature
-            </p>
           </div>
           
           {/* Spacer to enable scrolling */}

@@ -56,7 +56,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
-              <Logo className="w-12 h-12 transition-transform group-hover:scale-105" fill="var(--accent-color)" />
+              <Logo className="w-12  h-12 transition-transform group-hover:scale-105" fill="var(--color-accent)" />
               <div className="flex flex-col">
                 <span className="text-xl font-bold tracking-tight text-foreground">
                   MOBARREZ
